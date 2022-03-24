@@ -1,0 +1,8 @@
+.section__sidebar {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+  margin-left: -45px;
+}
