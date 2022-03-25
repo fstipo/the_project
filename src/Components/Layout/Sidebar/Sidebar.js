@@ -10,28 +10,33 @@ const Sidebar = () => {
       <ul>
         <li>
           <a className="btn link-light" href="#home">
-            Home
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
           </a>
         </li>
         <li>
-          <a className="btn link-light" href="#home">
-            Projects
+          <a className="btn link-light" href="#projects">
+            <i class="bi bi-folder2"></i>
+            <span>Projects</span>
           </a>
         </li>
 
         <li>
           <a className="btn  link-light" href="#home">
-            About
+            <i class="bi bi-info-circle"></i>
+            <span>About</span>
           </a>
         </li>
         <li>
           <a className="btn link-light" href="#home">
-            Jobs
+            <i class="bi bi-search"></i>
+            <span>Jobs</span>
           </a>
         </li>
         <li>
           <a className="btn link-light" href="#home">
-            Services
+            <i class="bi bi-gear"></i>
+            <span>Services</span>
           </a>
         </li>
       </ul>

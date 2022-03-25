@@ -1,14 +1,15 @@
 import React from 'react';
-import Navigation from './Sidebar';
-import Main from './Main';
+import './Container.css';
+import Navigation from '../Sidebar/Sidebar';
+import Main from '../Main/Main';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Layout = () => {
+const ContainerSection = () => {
   return (
     <Container fluid>
       <Row>
-        <Col className="col-2 bg-primary">
+        <Col className="sidebar col-2 bg-primary">
           <Navigation />
         </Col>
         <Col className="col-10 bg-light">
@@ -19,4 +20,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default ContainerSection;
