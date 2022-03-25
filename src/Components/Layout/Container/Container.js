@@ -12,7 +12,7 @@ const ContainerSection = () => {
         <Col className="sidebar col-2 bg-primary">
           <Navigation />
         </Col>
-        <Col className="col-10 bg-light">
+        <Col className="bg-light">
           <Main />
         </Col>
       </Row>

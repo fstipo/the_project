@@ -2,7 +2,26 @@
   height: 100vh;
 }
 
+ul {
+  width: 100%;
+  margin-left: -55px;
+}
+
 li {
   list-style: none;
-  margin-left: -45px;
+  text-align: start;
+}
+
+a {
+  /* width: 100%; */
+  display: block;
+  font-size: 200px;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+a:hover {
+  background-color: blue;
 }

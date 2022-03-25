@@ -7,7 +7,8 @@ const Sidebar = () => {
   return (
     <section className="section__sidebar text-white p-2">
       <div className="display-4 text-white mb-3 ">Logo</div>
-      <ul>
+
+      <ul className="d-grid gap-2">
         <li>
           <a className="btn link-light" href="#home">
             <i class="bi bi-house-door"></i>
