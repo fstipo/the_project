@@ -26,45 +26,6 @@ const Main = () => {
         suscipit quos molestias quo. Et fugiat, dolor eveniet rerum hic sunt
         inventore beatae aspernatur blanditiis? Ullam sit ex asperiores ducimus
         quis assumenda iure in sapiente incidunt officia ea, ipsam facilis error
-        dolorum, tempora aut explicabo et dolore! In recusandae nobis voluptatum
-        blanditiis ducimus quod sunt commodi quas hic earum reiciendis eius et
-        unde aperiam laboriosam beatae qui neque non dignissimos architecto iure
-        delectus, animi impedit. Accusantium sed, ipsum eaque explicabo, iusto
-        vero neque fugiat nostrum necessitatibus recusandae laboriosam, ipsam
-        officiis ratione labore. Officiis ratione aliquam laborum quasi deleniti
-        sequi molestiae, vero magni a reiciendis rem rerum qui quae minus cum,
-        aut eveniet doloremque quaerat excepturi expedita dolorem! Sunt qui
-        repudiandae ipsa, laudantium exercitationem maxime, dolorem nulla
-        distinctio, provident possimus iste. Rem tenetur, cumque doloremque, ut
-        ex commodi nobis dolorum soluta voluptas non deleniti magnam. Omnis sint
-        libero architecto quam. Eius laboriosam iste perferendis natus, cum
-        voluptates dicta totam quas necessitatibus illum et, voluptatum
-        voluptatibus, magni tempore praesentium animi? Exercitationem, eius
-        debitis quo ducimus natus, ipsum quam rem harum et error aut alias
-        tempora temporibus saepe enim nesciunt recusandae? Quos velit commodi
-        est veniam laboriosam consequatur officia rerum ratione ipsam saepe
-        tempora itaque deserunt laborum mollitia, error obcaecati. A deleniti
-        quidem reprehenderit maiores et impedit enim voluptatum. Ipsum, iste
-        exercitationem! Fugiat, amet. Iste autem, pariatur enim optio soluta
-        adipisci distinctio aliquid sequi consequuntur, eligendi repellendus
-        corporis voluptatem? Sunt magni harum neque earum molestias provident
-        natus tempore atque cupiditate blanditiis beatae quisquam velit
-        perferendis voluptatibus, reiciendis ab iste enim! Animi iure officiis
-        ullam expedita ea aliquam error? Quos accusantium in voluptates vero
-        quis eos qui nulla quia dicta maiores cum assumenda esse nemo numquam
-        unde, veniam consectetur aut praesentium. Harum exercitationem ipsum
-        cupiditate distinctio quo. Odit similique vitae magni modi veritatis
-        nulla eligendi aspernatur architecto a explicabo suscipit recusandae
-        iure saepe maiores vel totam necessitatibus fuga, perspiciatis, labore
-        eveniet! Eaque magni maxime, quos, consequatur expedita repudiandae,
-        molestias vitae sunt similique ipsa reiciendis iste aliquid qui.
-        Officiis perferendis reprehenderit cum voluptas accusamus debitis. Autem
-        odio temporibus facere corporis, enim aliquam debitis eveniet repellat
-        nam voluptatem est quis sequi vel? Mollitia iure expedita facilis
-        accusantium ea, et aut architecto ut? Labore, quis consequatur illum
-        veritatis quibusdam quaerat aperiam assumenda ratione voluptatem, libero
-        numquam, praesentium eligendi nam. Mollitia cumque sunt laborum earum
-        nisi?
       </div>
     </section>
   );

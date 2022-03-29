@@ -12,6 +12,10 @@
   color: #fff;
 }
 
+.sidebar__navigation__link:link:hover {
+  background-color: #fff;
+}
+
 .icon-logo {
   margin-left: 0.5rem;
 }
