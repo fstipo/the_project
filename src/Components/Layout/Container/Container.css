@@ -1,3 +1,4 @@
-.sidebar {
-  min-width: 200px;
+.section__sidebar {
+  height: 100vh;
+  min-width: 280px;
 }

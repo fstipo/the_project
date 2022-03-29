@@ -9,7 +9,7 @@ const ContainerSection = () => {
   return (
     <Container fluid>
       <Row>
-        <Col className="sidebar col-2 bg-primary">
+        <Col className="section__sidebar col-2 d-flex flex-shrink-0 flex-column text-white bg-dark">
           <Navigation />
         </Col>
         <Col className="bg-light">

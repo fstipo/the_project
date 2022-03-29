@@ -1,47 +1,17 @@
 import React from 'react';
 import './Sidebar.css';
 
-import { Col } from 'react-bootstrap';
-
 const Sidebar = () => {
   return (
-    <section className="section__sidebar text-white p-2">
-      <div className="display-4 text-white mb-3 ">Logo</div>
-
-      <ul className="d-grid gap-2">
-        <li>
-          <a className="btn link-light" href="#home">
-            <i class="bi bi-house-door"></i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a className="btn link-light" href="#projects">
-            <i class="bi bi-folder2"></i>
-            <span>Projects</span>
-          </a>
-        </li>
-
-        <li>
-          <a className="btn  link-light" href="#home">
-            <i class="bi bi-info-circle"></i>
-            <span>About</span>
-          </a>
-        </li>
-        <li>
-          <a className="btn link-light" href="#home">
-            <i class="bi bi-search"></i>
-            <span>Jobs</span>
-          </a>
-        </li>
-        <li>
-          <a className="btn link-light" href="#home">
-            <i class="bi bi-gear"></i>
-            <span>Services</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+    <>
+      <div className="logo">
+        <a>
+          <i class="bi bi-dice-5 ms-1" role="img" aria-label="dice-5"></i>
+          <span className="icon-logo">Logo</span>
+        </a>
+      </div>
+      <hr />
+    </>
   );
 };
 

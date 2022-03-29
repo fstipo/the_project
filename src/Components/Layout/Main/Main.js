@@ -13,7 +13,7 @@ const Main = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
         quae dolores id unde quam qui dolorum odio minima sunt facere?
         Cupiditate eum nobis sunt recusandae corrupti excepturi odit distinctio
-        assumenda illo, porro repellat numquam, eveniet molestiae laudantium!
+        assumenda illo, porro repellat numquam, eveniet molestiae laudantium!a
         Accusamus nemo quos rem ab fuga laudantium, nisi doloremque obcaecati
         consectetur blanditiis magni aliquid nulla, iusto, veritatis culpa
         explicabo commodi. Similique tenetur deserunt laboriosam? Corporis dicta

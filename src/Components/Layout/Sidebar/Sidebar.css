@@ -1,27 +1,8 @@
-.section__sidebar {
-  height: 100vh;
+.logo {
+  font-size: 1.8rem;
+  padding-top: 1rem;
 }
 
-ul {
-  width: 100%;
-  margin-left: -55px;
-}
-
-li {
-  list-style: none;
-  text-align: start;
-}
-
-a {
-  /* width: 100%; */
-  display: block;
-  font-size: 200px;
-}
-
-span {
-  font-size: 1.2rem;
-}
-
-a:hover {
-  background-color: blue;
+.icon-logo {
+  margin-left: 0.5rem;
 }
