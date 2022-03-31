@@ -1,0 +1,4 @@
+.sidebar__nav:link:hover,
+button:hover {
+  background-color: rgba(255, 255, 253, 0.2);
+}

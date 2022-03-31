@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import Layout from './Components/Layout/Container/Container';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from './Components/Layout/Container/Container';
 
 function App() {
-  return <Layout />;
+  return <Container />;
 }
 
 export default App;
