@@ -1,7 +1,7 @@
 import React from 'react';
 import SidebarItem from './SidebarItem';
 
-const SidebarNavigation = (props) => {
+const SidebarNavigation = ({ name, icon, onClick }) => {
   return (
     <nav className="navbar navbar-expend-md">
       <div className="d-grid gap-3 col-11 mx-auto mb-2">
@@ -16,7 +16,7 @@ const SidebarNavigation = (props) => {
           <hr />
         </ul>
         <button
-          className="nav-link btn text-white text-start ps-0"
+          className="sidebar__collapse__btn nav-link btn text-white text-start ps-0"
           type="button"
         >
           <i className="nav__icons bi bi-chevron-left me-2"></i>

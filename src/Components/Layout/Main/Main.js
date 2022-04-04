@@ -1,7 +1,7 @@
 import React from 'react';
 import MainTitle from './MainTitle';
 
-const Main = () => {
+const Main = ({ onClick }) => {
   return (
     <>
       <MainTitle />
