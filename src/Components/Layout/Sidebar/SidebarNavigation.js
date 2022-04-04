@@ -2,7 +2,6 @@ import React from 'react';
 import SidebarItem from './SidebarItem';
 
 const SidebarNavigation = ({ name, icon, onClick }) => {
-  console.log(onClick);
   return (
     <nav className="navbar navbar-expend-md">
       <div className="d-grid gap-3 col-11 mx-auto mb-2">
