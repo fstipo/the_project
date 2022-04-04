@@ -16,3 +16,9 @@ body {
   top: 0;
   left: 19rem;
 }
+
+.section__sidebar.collapsed {
+  min-width: 1rem;
+  align-items: center;
+  justify-content: center;
+}

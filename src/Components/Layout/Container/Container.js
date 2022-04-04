@@ -1,9 +1,17 @@
 import React from 'react';
 import './Container.css';
-import Main from '../Main/Main';
+// import Main from '../Main/Main';
 import Sidebar from '../Sidebar/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const Container = () => {
+import Home from '../../../Pages/home';
+import Project from '../../../Pages/project';
+import Dashboard from '../../../Pages/Dashboard';
+import Orders from '../../../Pages/Orders';
+import Products from '../../../Pages/Products';
+import Costumers from '../../../Pages/Costumers';
+
+const Container = (onClick) => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -11,7 +19,16 @@ const Container = () => {
           <Sidebar />
         </section>
         <section className="section__main col">
-          <Main />
+          {/* <Main onClick={onClick} />
+           */}
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/costumers" element={<Costumers />} />
+          </Routes>
         </section>
       </div>
     </div>

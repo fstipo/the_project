@@ -2,17 +2,18 @@ import React from 'react';
 import SidebarItem from './SidebarItem';
 
 const SidebarNavigation = ({ name, icon, onClick }) => {
+  console.log(onClick);
   return (
     <nav className="navbar navbar-expend-md">
       <div className="d-grid gap-3 col-11 mx-auto mb-2">
-        <ul className="navbar-nav ">
-          <SidebarItem name="Home" icon="house-door" />
-          <SidebarItem name="Project" icon="folder2-open" />
+        <ul className="navbar-nav">
+          <SidebarItem name="Home" icon="house-door" to="/" />
+          <SidebarItem name="Project" icon="folder2-open" to="/project" />
           <hr />
-          <SidebarItem name="Dashboard" icon="speedometer2" />
-          <SidebarItem name="Orders" icon="table" />
-          <SidebarItem name="Products" icon="grid" />
-          <SidebarItem name="Costumers" icon="person-circle" />
+          <SidebarItem name="Dashboard" icon="speedometer2" to="/dashboard" />
+          <SidebarItem name="Orders" icon="table" to="/orders" />
+          <SidebarItem name="Products" icon="grid" to="products" />
+          <SidebarItem name="Costumers" icon="person-circle" to="costumers" />
           <hr />
         </ul>
         <button
