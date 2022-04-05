@@ -15,10 +15,10 @@ const Container = (onClick) => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <section className="section__sidebar col-2 bg-dark text-white">
+        <section className="section__sidebar col-1 bg-dark text-white">
           <Sidebar />
         </section>
-        <section className="section__main col">
+        <section className="section__main col-10">
           {/* <Main onClick={onClick} />
            */}
           <Routes>
