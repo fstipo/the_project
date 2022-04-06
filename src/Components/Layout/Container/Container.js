@@ -15,10 +15,10 @@ const Container = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <section className="section__sidebar col col-sm-1 bg-dark text-white">
+        <section className="section__sidebar col-1 bg-dark text-white">
           <Sidebar />
         </section>
-        <section className="section__main ms-5 col-12 col-xl-8 col-lg-6 col-sm-2">
+        <section className="section__main ms-5 col-8 col-xl-8 col-lg-6">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/project" element={<Project />} />
