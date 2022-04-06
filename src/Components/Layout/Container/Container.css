@@ -7,10 +7,14 @@ body {
 
 .section__sidebar {
   height: 100vh;
-  min-width: 18rem;
+  min-width: 22rem;
   text-align: center;
 }
 
 .section__sidebar.collapsed {
-  min-width: 0;
+  min-width: 8rem;
 }
+
+/* .section__main {
+  margin-left: 550 px;
+} */

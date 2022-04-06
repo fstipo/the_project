@@ -1,6 +1,5 @@
 import React from 'react';
 import SidebarItem from './SidebarItem';
-import './Sidebar.css';
 
 const SidebarNavigation = () => {
   const addClass = () => {
@@ -10,16 +9,14 @@ const SidebarNavigation = () => {
     // const sidebar = document.querySelector('.section__sidebar');
     btnA.addEventListener('click', () => {
       linkA.forEach((el) => el.classList.toggle('collapse'));
-      // sidebar.style.minWidth = '10px';
-      // sidebar.style.textAlign = 'center';
       sidebar.classList.toggle('collapsed');
     });
   };
 
   return (
     <div>
-      <ul className="">
-        <SidebarItem name="Home" icon="house-door" to="/" />
+      <ul id="nav-pills pills-tab" role="tablist">
+        <SidebarItem name="Home" icon="house-door" to="/" classList="active" />
         <SidebarItem name="Project" icon="folder2-open" to="/project" />
         <hr />
         <SidebarItem name="Dashboard" icon="speedometer2" to="/dashboard" />

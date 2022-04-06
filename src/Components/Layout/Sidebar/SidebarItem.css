@@ -3,7 +3,6 @@
   border-radius: 9px;
 }
 
-/* .nav-link:link:active,
-.nav-link:link:visited {
-  background-color: aqua;
-} */
+.section__sidebar.collapsed ul {
+  padding-left: 1rem;
+}
