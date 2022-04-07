@@ -1,8 +1,41 @@
+.icon-logo {
+  font-size: 1.8rem;
+}
+
+.section__sidebar .logo a {
+  justify-content: left;
+  padding-left: 35px;
+}
+
 .nav-link:link:hover {
   background-color: rgba(255, 255, 253, 0.2);
-  border-radius: 9px;
+  border-radius: 6px;
+}
+
+.section__sidebar.collapsed .nav-link {
+  display: grid;
+  justify-content: end;
 }
 
 .section__sidebar.collapsed ul {
   padding-left: 1rem;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+
+.horizontalLine {
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  width: 90%;
+  margin-left: 8px;
 }

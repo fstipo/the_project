@@ -13,12 +13,12 @@ import Costumers from '../../../Pages/Costumers';
 
 const Container = () => {
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <section className="section__sidebar col-1 bg-dark text-white">
+    <div className="row">
+      <div className="container-fluid d-flex ">
+        <section className="col section__sidebar bg-dark">
           <Sidebar />
         </section>
-        <section className="section__main ms-5 col-8 col-xl-8 col-lg-6">
+        <section className="col section__main mx-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/project" element={<Project />} />

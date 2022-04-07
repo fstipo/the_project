@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SidebarItem = (props) => {
   return (
-    <div className="nav-link btn">
+    <div className="nav-link">
       <Link
         to={props.to}
         href={`#${props.name.toLowerCase()}`}
@@ -14,8 +14,10 @@ const SidebarItem = (props) => {
         title={props.name}
         role="presentation"
       >
-        <i className={`nav__icons bi bi-${props.icon} me-2`}></i>
-        <span className="sidebar__link__name">{props.name}</span>
+        <div className="link">
+          <i className={`nav__icons bi bi-${props.icon} ms-2`}></i>
+          <span className="sidebar__link__name">{props.name}</span>
+        </div>
       </Link>
     </div>
   );

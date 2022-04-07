@@ -63,9 +63,9 @@ const project = () => {
                 </p>
                 <p className="display-5 my-4 text-primary fw-bold">$24.99</p>
                 <p className="card-text mx-4 text-muted d-none d-xl-block">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-                  officia nam atque molestiae sint cum! Rem sint totam minus
-                  itaque quasi
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quoda officia nam atque molestiae sint cum! Rem sint totam
+                  minus itaque quasi
                 </p>
 
                 <a href="/" className="btn btn-outline-primary btn-lg mt-3">

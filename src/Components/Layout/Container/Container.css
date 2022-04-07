@@ -1,18 +1,15 @@
-body {
-  min-height: 100vh;
-  width: 100%;
-  /* overflow: hidden; */
-  position: relative;
-}
-
 .section__sidebar {
   height: 100vh;
-  min-width: 22rem;
-  text-align: center;
+  max-width: 14rem;
+  overflow: hidden;
 }
 
 .section__sidebar.collapsed {
-  min-width: 8rem;
+  max-width: 6rem;
+}
+
+i {
+  font-size: 1.9rem;
 }
 
 /* .section__main {
