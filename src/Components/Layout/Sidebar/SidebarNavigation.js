@@ -19,13 +19,13 @@ const SidebarNavigation = () => {
       <ul className="ps-0">
         <SidebarItem name="Home" icon="house-door" to="/" classList="active" />
         <SidebarItem name="Project" icon="folder2-open" to="/project" />
-        <div className="horizontalLine mb-5"></div>
+        <div className="horizontalLine mb-3"></div>
         <SidebarItem name="Dashboard" icon="speedometer2" to="/dashboard" />
         <SidebarItem name="Orders" icon="table" to="/orders" />
         <SidebarItem name="Products" icon="grid" to="/products" />
         <SidebarItem name="Costumers" icon="person-circle" to="/costumers" />
       </ul>
-      <div className="horizontalLine mb-5"></div>
+      <div className="horizontalLine mb-3"></div>
       <button
         className="collapse__btn nav-link btn text-white text-start"
         type="button"
