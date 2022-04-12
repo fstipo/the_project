@@ -43,3 +43,12 @@ a {
   width: 90%;
   margin-left: 8px;
 }
+
+.coll-icon {
+  transform: rotate(0deg);
+  transition: all 0.5ms ease-out;
+}
+
+.section__sidebar.collapsed .coll-icon {
+  transform: rotate(-180deg);
+}

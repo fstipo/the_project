@@ -7,9 +7,8 @@ const SidebarNavigation = () => {
     const btnA = document.querySelector('.collapse__btn');
     const linkA = document.querySelectorAll('.sidebar__link__name');
     const sidebar = document.querySelector('.section__sidebar');
-    // const sidebar = document.querySelector('.section__sidebar');
     btnA.addEventListener('click', () => {
-      linkA.forEach((el) => el.classList.toggle('collapse'));
+      let hasCollapsed = linkA.forEach((el) => el.classList.toggle('collapse'));
       sidebar.classList.toggle('collapsed');
     });
   };
@@ -32,7 +31,7 @@ const SidebarNavigation = () => {
         onClick={addClass}
       >
         <div className="link">
-          <i className="bi bi-chevron-double-left ms-4"></i>
+          <i className="coll-icon bi bi-chevron-double-left ms-4"></i>
           <span className="sidebar__link__name ms-2">Collapse</span>
         </div>
       </button>

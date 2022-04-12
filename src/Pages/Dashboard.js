@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import MainTitle from '../Components/Main/MainTitle';
 import { AgGridReact } from 'ag-grid-react';
 import '../Components/Layout/Container/Container.css';
@@ -7,6 +7,7 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 const Project = () => {
+  const gridRef = useRef(null);
   const [columnDefs] = useState([
     {
       field: 'first',
@@ -151,15 +152,14 @@ const Project = () => {
     <>
       <MainTitle name="Dashboard" icon="speedometer2" />
       <div className="container-fluid d-flex justify-content-center">
-        <div
-          className="table ag-theme-alpine"
-          style={{ width: '100%', height: '100%;' }}
-        >
+        <div className="table ag-theme-alpine" style={{ width: '100%' }}>
           <AgGridReact
+            ref={gridRef}
             rowData={rowData}
             columnDefs={columnDefs}
             gridOptions={gridOptions}
             onGridReady={onGridReady}
+            rowSelection="single"
           ></AgGridReact>
         </div>
       </div>
