@@ -8,7 +8,7 @@ const SidebarNavigation = () => {
     const linkA = document.querySelectorAll('.sidebar__link__name');
     const sidebar = document.querySelector('.section__sidebar');
     btnA.addEventListener('click', () => {
-      let hasCollapsed = linkA.forEach((el) => el.classList.toggle('collapse'));
+      linkA.forEach((el) => el.classList.toggle('collapse'));
       sidebar.classList.toggle('collapsed');
     });
   };

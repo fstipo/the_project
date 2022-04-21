@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .section__sidebar {
   height: 100vh;
   max-width: 14rem;
@@ -12,9 +16,9 @@ i {
   font-size: 1.9rem;
 }
 
-/* .section__main {
+.section__main {
   margin-left: 550 px;
-} */
+}
 
 .table {
   height: 85vh;

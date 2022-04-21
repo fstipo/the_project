@@ -2,11 +2,12 @@ import { useEffect, useState, useRef } from 'react';
 import MainTitle from '../Components/Main/MainTitle';
 import { AgGridReact } from 'ag-grid-react';
 import '../Components/Layout/Container/Container.css';
+import Modal from '../Components/Main/Modal';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-const Project = () => {
+const Project = (props) => {
   const gridRef = useRef(null);
   const [columnDefs] = useState([
     {
@@ -148,11 +149,43 @@ const Project = () => {
     e.columnApi.resetColumnState();
   };
 
+  const onButtonClick = () => {
+    const modal = document.querySelector('.modale');
+    modal.style.display = 'block';
+    getData();
+
+    // alert(`Selected nodes: ${selectedDataStringPresentation}`);
+  };
+
+  const getData = () => {
+    const selectedNodes = gridRef.current.api.getSelectedNodes();
+    const selectedData = selectedNodes.map((node) => node.data);
+    console.log(selectedData);
+    const selectedDataStringPresentation = selectedData
+      .map((node) => node.first)
+      .join(',');
+    console.log(selectedDataStringPresentation);
+    return selectedDataStringPresentation;
+  };
+
   return (
     <>
+      <Modal close={props.onClick}></Modal>
       <MainTitle name="Dashboard" icon="speedometer2" />
       <div className="container-fluid d-flex justify-content-center">
         <div className="table ag-theme-alpine" style={{ width: '100%' }}>
+          <a
+            href="#getSelectedRow"
+            className="d-block m-3"
+            role="button"
+            aria-controls="sidebar"
+            onClick={onButtonClick}
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Get selected row
+          </a>
           <AgGridReact
             ref={gridRef}
             rowData={rowData}
