@@ -139,6 +139,7 @@ const Project = (props) => {
   //   },
   // ]);
 
+  const [userData, setUserData] = useState('');
   const gridOptions = {
     pagination: true,
     paginationAutoPageSize: true,
@@ -160,17 +161,16 @@ const Project = (props) => {
   const getData = () => {
     const selectedNodes = gridRef.current.api.getSelectedNodes();
     const selectedData = selectedNodes.map((node) => node.data);
-    console.log(selectedData);
-    const selectedDataStringPresentation = selectedData
-      .map((node) => node.first)
-      .join(',');
-    console.log(selectedDataStringPresentation);
-    return selectedDataStringPresentation;
+    const data = selectedData[0];
+    console.log(data);
+    setUserData(data);
   };
+
+  // data={userData}
 
   return (
     <>
-      <Modal close={props.onClick}></Modal>
+      <Modal close={props.onClick} data={userData}></Modal>
       <MainTitle name="Dashboard" icon="speedometer2" />
       <div className="container-fluid d-flex justify-content-center">
         <div className="table ag-theme-alpine" style={{ width: '100%' }}>

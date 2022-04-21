@@ -16,16 +16,18 @@ const Modal = (props) => {
   return (
     <div id="staticBackdrop" className="modale">
       <header className="header bg-dark text-white p1">
-        <h3>Noe Crooks</h3>
+        <h3>
+          {props.data.first} {props.data.last}
+        </h3>
       </header>
       <div className="content">
         <ul>
-          <li>First Name:{props.data} </li>
-          <li>Last Name: Crooks</li>
-          <li>Email: magentarabbit84@gmail.com</li>
-          <li>Address: 2164 Christopher Islands</li>
-          <li>Created: July 21, 2015</li>
-          <li>Balance: $1,286.79</li>
+          <li>First Name:{props.data.first}</li>
+          <li>Last Name: {props.data.last}</li>
+          <li>Email: {props.data.email}</li>
+          <li>Address: {props.data.address}</li>
+          <li>Created: {props.data.created}</li>
+          <li>Balance: {props.data.balance}</li>
         </ul>
       </div>
       <footer className="actions">
