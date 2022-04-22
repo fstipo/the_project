@@ -163,7 +163,11 @@ const Project = (props) => {
     const selectedData = selectedNodes.map((node) => node.data);
     const data = selectedData[0];
     console.log(data);
-    setUserData(data);
+    if (data) {
+      setUserData(data);
+    } else {
+      return;
+    }
   };
 
   // data={userData}
