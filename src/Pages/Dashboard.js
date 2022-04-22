@@ -152,7 +152,9 @@ const Project = (props) => {
 
   const onButtonClick = () => {
     const modal = document.querySelector('.modale');
+    const backdrop = document.getElementById('backdrop');
     modal.style.display = 'block';
+    backdrop.classList.add('backdrop');
     getData();
 
     // alert(`Selected nodes: ${selectedDataStringPresentation}`);
@@ -162,15 +164,12 @@ const Project = (props) => {
     const selectedNodes = gridRef.current.api.getSelectedNodes();
     const selectedData = selectedNodes.map((node) => node.data);
     const data = selectedData[0];
-    console.log(data);
     if (data) {
       setUserData(data);
     } else {
       return;
     }
   };
-
-  // data={userData}
 
   return (
     <>
