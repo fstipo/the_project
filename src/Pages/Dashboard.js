@@ -3,12 +3,32 @@ import MainTitle from '../Components/Main/MainTitle';
 import { AgGridReact } from 'ag-grid-react';
 import '../Components/Layout/Container/Container.css';
 import Modal from '../Components/Main/Modal';
+import Modal2 from '../Components/Main/Modal2';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 const Project = (props) => {
   const gridRef = useRef(null);
+  const [rowData, setRowData] = useState([]);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const onClick2 = () => {
+    getData();
+    setShow(true);
+  };
+
+  const details = (p) => (
+    <button
+      className="btn btn-link"
+      onClick={onClick2}
+      onChange={onButtonClick}
+    >
+      ...details
+    </button>
+  );
   const [columnDefs] = useState([
     {
       field: 'first',
@@ -38,20 +58,19 @@ const Project = (props) => {
       field: 'address',
       sortable: 'true',
       filter: 'true',
-      headerTooltip: 'Full Name',
+      headerTooltip: 'Address',
       width: 230,
     },
     {
       field: 'created',
       sortable: 'true',
       filter: 'true',
-      headerTooltip: 'Age',
-      width: 165,
+      headerTooltip: 'Created',
+      width: 125,
     },
-    { field: 'balance', sortable: 'true', filter: 'true' },
+    { field: 'balance', sortable: 'true', filter: 'true', width: 165 },
+    { field: 'details', headerTooltip: 'Details', cellRenderer: details },
   ]);
-
-  const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
     // fetch('https://www.ag-grid.com/example-assets/row-data.json')
@@ -61,83 +80,10 @@ const Project = (props) => {
       'https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole'
     )
       .then((response) => response.json())
-      .then((data) => setRowData(data));
+      .then((data) => {
+        setRowData(data);
+      });
   }, []);
-
-  // const [rowData] = useState([
-  //   {
-  //     first: 'John',
-  //     last: 'Grayner',
-  //     full: 'John Grayner',
-  //     age: 39,
-  //     email: 'john@gmail.com',
-  //   },
-  //   {
-  //     first: 'Franko',
-  //     last: 'Stipanov',
-  //     full: 'Franko Stipanov',
-  //     age: 44,
-  //     email: 'franko@gmail.com',
-  //   },
-  //   {
-  //     first: 'Goran',
-  //     last: 'Jakovljević',
-  //     full: 'Goran Jakovljević',
-  //     age: 43,
-  //     email: 'goran@gmail.com',
-  //   },
-  //   {
-  //     first: 'Mary',
-  //     last: 'Black',
-  //     full: 'Mary Black',
-  //     age: 14,
-  //     email: 'mary@gmail.com',
-  //   },
-  //   {
-  //     first: 'Josipa',
-  //     last: 'Stipanov',
-  //     full: 'Josipa Stipanov',
-  //     age: 43,
-  //     email: 'josipa@gmail.com',
-  //   },
-  //   {
-  //     first: 'Mike',
-  //     last: 'Jordan',
-  //     full: 'Mike Jordan',
-  //     age: 55,
-  //     email: 'mike@gmail.com',
-  //   },
-  //   {
-  //     first: 'Johny',
-  //     last: 'Lennon',
-  //     full: 'Johny Lennon',
-  //     age: 33,
-  //     email: 'johnny@gmail.com',
-  //   },
-  //   { first: 'Marty', last: 'Moon', full: 'Marty Moon', age: 65 },
-  //   {
-  //     first: 'Victory',
-  //     last: 'Hope',
-  //     full: 'Victory Hope',
-  //     age: 23,
-  //     email: 'victory@gmail.com',
-  //   },
-  //   { first: 'Robert', last: 'Hill', full: 'Robert Hill', age: 98 },
-  //   {
-  //     first: 'Alan',
-  //     last: 'Ford',
-  //     full: 'Alan Ford',
-  //     age: 19,
-  //     email: 'alan@gmail.com',
-  //   },
-  //   {
-  //     first: 'Sue',
-  //     last: 'Ford',
-  //     full: 'Sue Ford',
-  //     age: 26,
-  //     email: 'sue@gmail.com',
-  //   },
-  // ]);
 
   const [userData, setUserData] = useState('');
   const gridOptions = {
@@ -156,8 +102,6 @@ const Project = (props) => {
     modal.style.display = 'block';
     backdrop.classList.add('backdrop');
     getData();
-
-    // alert(`Selected nodes: ${selectedDataStringPresentation}`);
   };
 
   const getData = () => {
@@ -173,6 +117,7 @@ const Project = (props) => {
 
   return (
     <>
+      <Modal2 show={show} handleClose={handleClose} data={userData} />
       <Modal close={props.onClick} data={userData}></Modal>
       <MainTitle name="Dashboard" icon="speedometer2" />
       <div className="container-fluid d-flex justify-content-center">

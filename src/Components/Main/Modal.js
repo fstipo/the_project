@@ -1,14 +1,8 @@
 import React from 'react';
+
 import './Modal.css';
 
 const Modal = (props) => {
-  // var myModal = document.getElementById('myModal');
-  // var myInput = document.getElementById('myInput');
-
-  // myModal.addEventListener('shown.bs.modal', function () {
-  //   myInput.focus();
-  // });
-
   const onClose = () => {
     const modal = document.querySelector('.modale');
     const backdrop = document.getElementById('backdrop');
@@ -48,6 +42,7 @@ const Modal = (props) => {
             </li>
           </ul>
         </div>
+
         <footer className="actions">
           <button
             type="button"
