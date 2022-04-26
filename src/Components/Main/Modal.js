@@ -1,25 +1,16 @@
 import React from 'react';
+import { Button, Modal } from 'react-bootstrap';
 
-import './Modal.css';
-
-const Modal = (props) => {
-  const onClose = () => {
-    const modal = document.querySelector('.modale');
-    const backdrop = document.getElementById('backdrop');
-    modal.style.display = 'none';
-    backdrop.classList.remove('backdrop');
-  };
-
+const ModalShow = (props) => {
   return (
     <>
-      <div id="backdrop" className="" onClick={onClose}></div>
-      <div id="staticBackdrop" className="modale">
-        <header className="header bg-dark text-white p1">
-          <h3 className="text-center">
+      <Modal show={props.show} onHide={props.handleClose}>
+        <Modal.Header className=" btn-dark">
+          <Modal.Title>
             {props.data.first} {props.data.last}
-          </h3>
-        </header>
-        <div className="content">
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
           <ul>
             <li>
               <strong>First Name:&nbsp;</strong>
@@ -41,24 +32,18 @@ const Modal = (props) => {
               <strong>Balance:&nbsp;</strong> {props.data.balance}
             </li>
           </ul>
-        </div>
-
-        <footer className="actions">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            data-bs-dismiss="modal"
-            onClick={onClose}
-          >
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={props.handleClose}>
             Close
-          </button>
-          <button type="button" className="btn btn-primary">
-            Save changes
-          </button>
-        </footer>
-      </div>
+          </Button>
+          <Button variant="primary" onClick={props.handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
 
-export default Modal;
+export default ModalShow;

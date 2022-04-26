@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Container.css';
 // import Main from '../Main/Main';
 import Sidebar from '../Sidebar/Sidebar';
@@ -10,8 +10,16 @@ import Dashboard from '../../../Pages/Dashboard';
 import Orders from '../../../Pages/Orders';
 import Products from '../../../Pages/Products';
 import Costumers from '../../../Pages/Costumers';
+import UserDetails from '../../../Pages/UserDetails';
 
-const Container = () => {
+const Container = (props) => {
+  const [savedData, setSavedData] = useState('');
+
+  const saveDataHandler = (savedData) => {
+    const newData = { ...savedData, id: savedData.email };
+    setSavedData(newData);
+  };
+
   return (
     <div className="row">
       <div className="container-fluid d-flex ">
@@ -22,10 +30,14 @@ const Container = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/project" element={<Project />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="/dashboard"
+              element={<Dashboard onSave={saveDataHandler} />}
+            />
             <Route path="/orders" element={<Orders />} />
             <Route path="/products" element={<Products />} />
             <Route path="/costumers" element={<Costumers />} />
+            <Route path="/details" element={<UserDetails data={savedData} />} />
           </Routes>
         </section>
       </div>
