@@ -14,8 +14,8 @@ const Project = (props) => {
   const [rowData, setRowData] = useState([]);
   const [show, setShow] = useState(false);
   const [userData, setUserData] = useState('');
+
   const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   const modalHandler = () => {
     const selectedNodes = gridRef.current.api.getSelectedNodes();

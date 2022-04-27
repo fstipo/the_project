@@ -11,13 +11,14 @@ import Orders from '../../../Pages/Orders';
 import Products from '../../../Pages/Products';
 import Costumers from '../../../Pages/Costumers';
 import UserDetails from '../../../Pages/UserDetails';
+export const dataContext = React.createContext();
 
 const Container = (props) => {
-  const [savedData, setSavedData] = useState('');
+  const [selectedUserId, setSelectedUserId] = useState('');
 
   const saveDataHandler = (savedData) => {
     const newData = { ...savedData, id: savedData.email };
-    setSavedData(newData);
+    setSelectedUserId(newData.id);
   };
 
   return (
@@ -26,19 +27,22 @@ const Container = (props) => {
         <section className="col section__sidebar bg-dark">
           <Sidebar />
         </section>
+
         <section className="col section__main mx-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project" element={<Project />} />
-            <Route
-              path="/dashboard"
-              element={<Dashboard onSave={saveDataHandler} />}
-            />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/costumers" element={<Costumers />} />
-            <Route path="/details" element={<UserDetails data={savedData} />} />
-          </Routes>
+          <dataContext.Provider value={selectedUserId}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/project" element={<Project />} />
+              <Route
+                path="/dashboard"
+                element={<Dashboard onSave={saveDataHandler} />}
+              />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/costumers" element={<Costumers />} />
+              <Route path="/details" element={<UserDetails />} />
+            </Routes>
+          </dataContext.Provider>
         </section>
       </div>
     </div>
