@@ -22,8 +22,8 @@ const UserDetails = (props) => {
   }, [userId]);
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container-flow">
+      <div className="row ms-5">
         <div className="col-12">
           <div className="my-5">
             <h3>
@@ -34,34 +34,34 @@ const UserDetails = (props) => {
 
           <form className="file-upload">
             <div className="row mb-5 gx-5">
-              <div className="col-xxl-8 mb-5 mb-xxl-0">
-                <div className="bg-secondary-soft px-4 py-5 rounded">
+              <div className="col-xl-8 mb-5 mb-xxl-10">
+                <div className="bg-secondary-soft px-4 py-3 rounded">
                   <div className="row g-3">
                     <h4 className="mb-4 mt-0">Contact detail</h4>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label className="form-label">First Name *</label>
                       <input
                         type="text"
                         className="form-control"
                         placeholder=""
                         aria-label="First name"
-                        value={userData.first}
+                        defaultValue={userData.first}
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label className="form-label">Last Name *</label>
                       <input
                         type="text"
                         className="form-control"
                         placeholder=""
                         aria-label="Last name"
-                        value={userData.last}
+                        defaultValue={userData.last}
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label htmlFor="inputEmail4" className="form-label">
                         Email *
                       </label>
@@ -69,40 +69,40 @@ const UserDetails = (props) => {
                         type="email"
                         className="form-control"
                         id="inputEmail4"
-                        value={userData.email}
+                        defaultValue={userData.email}
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label className="form-label">Address *</label>
                       <input
                         type="text"
                         className="form-control"
                         placeholder=""
                         aria-label="Address"
-                        value={userData.address}
+                        defaultValue={userData.address}
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label className="form-label">Created *</label>
                       <input
                         type="text"
                         className="form-control"
                         placeholder=""
                         aria-label="created"
-                        value={userData.created}
+                        defaultValue={userData.created}
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <label className="form-label">Balance *</label>
                       <input
                         type="text"
                         className="form-control"
                         placeholder=""
                         aria-label="Phone number"
-                        value={userData.balance}
+                        defaultValue={userData.balance}
                       />
                     </div>
                   </div>
